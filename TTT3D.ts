@@ -1,43 +1,5 @@
-export type Transform = [number, number, number, number, number, number, number, number, number];
-
-export interface TransformMap {
-    [part: string]: Transform
-}
-
-class Transition {
-    weight = 1;
-    rate = 1;
-    loop = false;
-    #counter = 1;
-    #f: (c: number) => TransformMap;
-
-    constructor(f: (c: number) => TransformMap) {
-        this.#f = f;
-    }
-
-    play(rate = 1, loop = false) {
-        this.rate = rate;
-        this.loop = loop;
-        this.#counter = 0;
-    }
-
-    stop() {
-        this.loop = false;
-        this.#counter = 1;
-    }
-
-    update(delta: number): TransformMap | void {
-        this.#counter += delta * this.rate;
-        if (this.#counter >= 1)
-            this.#counter = this.loop ? this.#counter 1 : 1;
-        if (this.#counter >= 1)
-            return;
-        return this.#f(this.#counter);
-    }
-}
-
 /**
- * TTT - Tiny Transform Transitions
+ * TTT3D - Tiny Transform Transitions 3D
  */
 export default class TTT3D {
     #transitions: Map<string, Transition>;
@@ -171,3 +133,41 @@ export default class TTT3D {
         return res;
     }
 }
+
+class Transition {
+    weight = 1;
+    rate = 1;
+    loop = false;
+    #counter = 1;
+    #f: (c: number) => TransformMap;
+
+    constructor(f: (c: number) => TransformMap) {
+        this.#f = f;
+    }
+
+    play(rate = 1, loop = false) {
+        this.rate = rate;
+        this.loop = loop;
+        this.#counter = 0;
+    }
+
+    stop() {
+        this.loop = false;
+        this.#counter = 1;
+    }
+
+    update(delta: number): TransformMap | void {
+        this.#counter += delta * this.rate;
+        if (this.#counter >= 1)
+            this.#counter = this.loop ? this.#counter - 1 : 1;
+        if (this.#counter >= 1)
+            return;
+        return this.#f(this.#counter);
+    }
+}
+
+export interface TransformMap {
+    [part: string]: Transform
+}
+
+export type Transform = [number, number, number, number, number, number, number, number, number];
