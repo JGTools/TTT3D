@@ -110,7 +110,7 @@ export default class TTT3D {
 
     /**
      * Update all transforms
-     * @param delta - time in seconds since last update
+     * @param delta - Time in seconds since last update
      * @returns {TransformMap} Updated transforms
      */
     update(delta: number): TransformMap {
