@@ -29,7 +29,7 @@ class Transition {
     update(delta: number): TransformMap | void {
         this.#counter += delta * this.rate;
         if (this.#counter >= 1)
-            this.#counter = this.loop ? this.#counter - 1 : 1;
+            this.#counter = this.loop ? this.#counter 1 : 1;
         if (this.#counter >= 1)
             return;
         return this.#f(this.#counter);
@@ -37,14 +37,14 @@ class Transition {
 }
 
 /**
- * TTT3D - Tiny Transform Transitions 3D
+ * TTT - Tiny Transform Transitions
  */
 export default class TTT3D {
     #transitions: Map<string, Transition>;
     #origin: TransformMap;
 
     /**
-     * @param origin - Transforms origin for all parts
+     * @param origin Transforms origin for all parts
      */
     constructor(origin: TransformMap) {
         this.#transitions = new Map<string, Transition>();
@@ -53,8 +53,8 @@ export default class TTT3D {
 
     /**
      * Add transition
-     * @param name - Name of transition
-     * @param f - Function that will be executed each update
+     * @param name Name of transition
+     * @param f Function that will be executed each update
      */
     add(name: string, f: (c: number) => TransformMap) {
         this.#transitions.set(name, new Transition(f));
@@ -62,9 +62,9 @@ export default class TTT3D {
 
     /**
      * Play transition
-     * @param name - Name of transition
-     * @param rate - Rate of transition, default: 1
-     * @param loop - Loop the transition, default: false
+     * @param name Name of transition
+     * @param rate Rate of transition, default: 1
+     * @param loop Loop the transition, default: false
      */
     play(name: string, rate = 1, loop = false) {
         this.#transitions.get(name)?.play(rate, loop);
@@ -72,7 +72,7 @@ export default class TTT3D {
 
     /**
      * Stop transition
-     * @param name - Name of transition
+     * @param name Name of transition
      */
     stop(name: string) {
         this.#transitions.get(name)?.stop();
@@ -80,8 +80,8 @@ export default class TTT3D {
 
     /**
      * Set weight of transition
-     * @param name - Name of transition
-     * @param w - Weight of transition
+     * @param name Name of transition
+     * @param w Weight of transition
      */
     setWeight(name: string, w: number) {
         const a = this.#transitions.get(name);
@@ -90,8 +90,8 @@ export default class TTT3D {
 
     /**
      * Set rate of transition
-     * @param name - Name of transition
-     * @param r - Rate of transition
+     * @param name Name of transition
+     * @param r Rate of transition
      */
     setRate(name: string, r: number) {
         const a = this.#transitions.get(name);
@@ -100,8 +100,8 @@ export default class TTT3D {
 
     /**
      * Set whether the transition loops
-     * @param name - Name of transition
-     * @param l - Whether it loops
+     * @param name Name of transition
+     * @param l Whether it loops
      */
     setLoop(name: string, l: boolean) {
         const a = this.#transitions.get(name);
@@ -109,8 +109,35 @@ export default class TTT3D {
     }
 
     /**
+     * Get weight of transition
+     * @param name Name of transition
+     * @returns Weight of transition
+     */
+    getWeight(name: string): number {
+        return this.#transitions.get(name)?.weight || 0;
+    }
+
+    /**
+     * Get rate of transition
+     * @param name Name of transition
+     * @returns Rate of transition
+     */
+    getRate(name: string): number {
+        return this.#transitions.get(name)?.rate || 0;
+    }
+
+    /**
+     * Get whether the transition loops
+     * @param name Name of transition
+     * @returns Whether it loops
+     */
+    getLoop(name: string): boolean {
+        return this.#transitions.get(name)?.loop || false;
+    }
+
+    /**
      * Update all transforms
-     * @param delta - Time in seconds since last update
+     * @param delta Time in seconds since last update
      * @returns {TransformMap} Updated transforms
      */
     update(delta: number): TransformMap {
