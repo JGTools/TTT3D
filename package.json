@@ -1,8 +1,8 @@
 {
   "name": "@jgtools/ttt3d",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TTT3D - Tiny Transform Transitions 3D",
-  "main": "index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
