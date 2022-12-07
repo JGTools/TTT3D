@@ -18,7 +18,7 @@ export default class TTT3D {
      * @param name Name of transition
      * @param f Function that will be executed each update
      */
-    add(name: string, f: (c: number) => TransformMap) {
+    add(name: string, f: (c: number) => TransformMapTerm) {
         this.#transitions.set(name, new Transition(f));
     }
 
@@ -112,14 +112,15 @@ export default class TTT3D {
         return res;
     }
 
-    #addTransform(sum: TransformMap, term: TransformMap, weight: number) {
+    #addTransform(sum: TransformMap, term: TransformMapTerm, weight: number) {
         for (const p in term) {
             const ps = sum[p];
             if (!ps)
                 continue;
             const pt = term[p];
-            for (let i = 0; i < 9; i++) {
-                ps[i] += pt[i] * weight;
+            for (let i = 0; i < pt.length; i++) {
+                const t = pt[i] || 0;
+                ps[i] += t * weight;
             }
         }
     }
@@ -139,9 +140,9 @@ class Transition {
     rate = 1;
     loop = false;
     #counter = 1;
-    #f: (c: number) => TransformMap;
+    #f: (c: number) => TransformMapTerm;
 
-    constructor(f: (c: number) => TransformMap) {
+    constructor(f: (c: number) => TransformMapTerm) {
         this.#f = f;
     }
 
@@ -156,7 +157,7 @@ class Transition {
         this.#counter = 1;
     }
 
-    update(delta: number): TransformMap | void {
+    update(delta: number): TransformMapTerm | void {
         this.#counter += delta * this.rate;
         if (this.#counter >= 1)
             this.#counter = this.loop ? this.#counter - 1 : 1;
@@ -170,4 +171,9 @@ export interface TransformMap {
     [part: string]: Transform
 }
 
+export interface TransformMapTerm {
+    [part: string]: TransformTerm
+}
+
+export type TransformTerm = [number?, number?, number?, number?, number?, number?, number?, number?, number?];
 export type Transform = [number, number, number, number, number, number, number, number, number];
