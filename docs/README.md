@@ -10,10 +10,10 @@ TTT3D - Tiny Transform Transitions 3D
 
 ## Features
 
-- Lightweight library for managing transform transitions
-- Written in TypeScript
-- Simple and flexible way to animate 3D objects
-- Can be used with any 3D library
+- :heavy_check_mark: Lightweight library for managing transform transitions
+- :heavy_check_mark: Simple and flexible way to animate 3D objects
+- :heavy_check_mark: Can be used with any 3D library
+- :blue_square: Written in TypeScript
 
 ## Installation
 
@@ -32,11 +32,14 @@ npm i @jgtools/ttt3d
 </script>
 ```
 
-## Examples
+## Usage
 
 ### Simple example
 
-Animating a jumping cube. Full code [here](examples/simple/index.html).
+Animating a jumping cube.
+
+- Full code [here](examples/simple/index.html)
+- Codepen demo [here](https://codepen.io/erik1001/pen/wvxvKwo)
 
 Create cube and define animations:
 
@@ -85,7 +88,7 @@ cube.scale.set(part[6], part[7], part[8]);
 
 ## Docs
 
-[Complete docs here](docs/index.html)
+[Complete docs here](docs/classes/default.md)
 
 ## License
 
