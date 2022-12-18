@@ -8,7 +8,7 @@
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.147.0/three.min.js" integrity="sha512-GWXLkqxMENYgBdQvA/lTeOV+R2auhasgKQxjMTWBFt3Z6GJVZ9owiyAMOzz0Wt6J1ri8bf/g2kHJV0uvWpJTuw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" defer>
-        //import TTT3D
+        // import TTT3D
         import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.3/dist/index.min.js";
         // setup three js
         const scene = new THREE.Scene();
@@ -30,7 +30,7 @@
         const cube = new THREE.Mesh(geo, mat);
         scene.add(cube);
 
-        //setup transitions (only one in this example)
+        // setup transitions (only one in this example)
         // [pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, scale.x, scale.y, scale.z]
         const origins = {
             cube: [0, 0, 0, 0, 0, 0, 1, 1, 1]

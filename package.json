@@ -11,11 +11,17 @@
     "type": "git",
     "url": "git+https://github.com/JGTools/TTT3D.git"
   },
-  "keywords": ["javascript","typescript"],
+  "keywords": [
+    "javascript",
+    "typescript"
+  ],
   "author": "Erik1001",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JGTools/TTT3D/issues"
   },
-  "homepage": "https://github.com/JGTools/TTT3D#readme"
+  "homepage": "https://github.com/JGTools/TTT3D#readme",
+  "devDependencies": {
+    "typedoc": "^0.23.23"
+  }
 }
