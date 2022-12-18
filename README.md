@@ -11,7 +11,7 @@ TTT3D - Tiny Transform Transitions 3D
 - :heavy_check_mark: Lightweight library for managing transform transitions
 - :heavy_check_mark: Simple and flexible way to animate 3D objects
 - :heavy_check_mark: Can be used with any 3D library
-- :blue_heart: Written in TypeScript
+- :heavy_check_mark::blue_square: Written in TypeScript
 
 ## Installation
 
