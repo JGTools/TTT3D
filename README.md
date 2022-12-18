@@ -1,8 +1,8 @@
 # TTT3D
 
-![npm](https://img.shields.io/npm/v/@jgtools/ttt3d)
-![npm](https://img.shields.io/npm/dm/@jgtools/ttt3d)
-![GitHub](https://img.shields.io/github/license/jgtools/ttt3d)
+[![npm](https://img.shields.io/npm/v/@jgtools/ttt3d)](https://www.npmjs.com/package/@jgtools/ttt3d)
+[![npm](https://img.shields.io/npm/dm/@jgtools/ttt3d)](https://www.npmjs.com/package/@jgtools/ttt3d)
+[![GitHub](https://img.shields.io/github/license/jgtools/ttt3d)](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 
 TTT3D - Tiny Transform Transitions 3D
 
@@ -44,12 +44,14 @@ const mat = new THREE.MeshLambertMaterial({ color: 0x00ffff });
 const cube = new THREE.Mesh(geo, mat);
 scene.add(cube);
 
-// setup jump transition
+// create ttt3d instance
 // [pos.x, pos.y, pos.z, rot.x, rot.y, rot.z, scale.x, scale.y, scale.z]
 const origins = {
   cube: [0, 0, 0, 0, 0, 0, 1, 1, 1],
 };
 const ttt = new TTT3D(origins);
+
+// setup jump transition
 ttt.add("jump", (c) => {
   const t = Math.sin(c * Math.PI);
   return {
@@ -73,8 +75,6 @@ cube.position.set(part[0], part[1], part[2]);
 cube.rotation.set(part[3], part[4], part[5]);
 cube.scale.set(part[6], part[7], part[8]);
 ```
-
-![simple example gif](docs/simple.svg)
 
 ### Advanced example
 
