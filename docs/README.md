@@ -1,3 +1,5 @@
+@jgtools/ttt3d / [Exports](modules.md)
+
 # TTT3D
 
 [![npm](https://img.shields.io/npm/v/@jgtools/ttt3d)](https://www.npmjs.com/package/@jgtools/ttt3d)
@@ -83,7 +85,7 @@ cube.scale.set(part[6], part[7], part[8]);
 
 ## Docs
 
-[Complete docs here](docs/classes/default.md)
+[Complete docs here](docs/index.html)
 
 ## License
 
