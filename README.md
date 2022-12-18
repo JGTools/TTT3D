@@ -30,14 +30,14 @@ npm i @jgtools/ttt3d
 </script>
 ```
 
-## Examples
+## Usage
 
 ### Simple example
 
 Animating a jumping cube.
 
-- Full code [here](examples/simple/index.html).
-- Codepen demo [here](https://codepen.io/erik1001/pen/wvxvKwo).
+- Full code [here](examples/simple/index.html)
+- Codepen demo [here](https://codepen.io/erik1001/pen/wvxvKwo)
 
 Create cube and define animations:
 
