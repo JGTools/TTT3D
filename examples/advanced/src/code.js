@@ -1,3 +1,4 @@
+import { outElastic } from '@jgtools/easings';
 import TTT3D from '@jgtools/ttt3d';
 import * as THREE from 'three';
 
@@ -59,8 +60,9 @@ ttt.add("walk", c => {
 });
 ttt.add("jump", c => {
     const t = Math.sin(c * Math.PI);
+    const hs = outElastic(t);
     return {
-        head: [0, t, 0, -t * 0.4, 0, 0, -t * 0.4, t * 0.3, -t * 0.4],
+        head: [0, t, 0, -t * 0.4, 0, 0, -hs * 0.4, hs * 0.5, -hs * 0.4],
         rightFoot: [0, t, 0, t],
         leftFoot: [0, t * 1.3, 0, t * 1.5]
     };
@@ -68,7 +70,7 @@ ttt.add("jump", c => {
 
 ttt.play("idle", 1, true);
 ttt.play("walk", 0.6, true);
-setInterval(() => ttt.play("jump"), 3000);
+setInterval(() => ttt.play("jump", 0.6), 3000);
 
 let isWalking = true;
 setInterval(() => isWalking = !isWalking, 5000);
