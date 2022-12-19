@@ -148,7 +148,7 @@ let isWalking = true;
 setInterval(() => isWalking = !isWalking, 5000);
 ```
 
-Update each frame and apply result to mesh:
+Update each frame and apply result to meshes:
 
 ```javascript
 // blend smoothly between the walk and idle
