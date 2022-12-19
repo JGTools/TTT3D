@@ -8,8 +8,7 @@ TTT3D - Tiny Transform Transitions 3D
 
 ## Features
 
-- :heavy_check_mark: Lightweight library for managing transform transitions
-- :heavy_check_mark: Simple and flexible way to animate 3D objects
+- :heavy_check_mark: Lightweight and simple way to animate 3D objects
 - :heavy_check_mark: Can be used with any 3D library
 - :blue_square: Written in TypeScript
 
@@ -25,7 +24,7 @@ npm i @jgtools/ttt3d
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.3/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.4/dist/index.min.js";
     // ...
 </script>
 ```

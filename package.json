@@ -1,6 +1,6 @@
 {
   "name": "@jgtools/ttt3d",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TTT3D - Tiny Transform Transitions 3D",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

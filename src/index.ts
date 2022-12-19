@@ -3,14 +3,14 @@
  */
 export default class TTT3D {
     #transitions: Map<string, Transition>;
-    #origin: TransformMap;
+    #origins: TransformMap;
 
     /**
-     * @param origin Transforms origin for all parts
+     * @param origins Transform origins for all parts
      */
-    constructor(origin: TransformMap) {
+    constructor(origins: TransformMap) {
         this.#transitions = new Map<string, Transition>();
-        this.#origin = origin;
+        this.#origins = origins;
     }
 
     /**
@@ -103,7 +103,7 @@ export default class TTT3D {
      * @returns {TransformMap} Updated transforms
      */
     update(delta: number): TransformMap {
-        const res = this.#copyOrigin();
+        const res = this.#copyOrigins();
         for (const [k, e] of this.#transitions) {
             const t = e.update(delta);
             if (t && e.weight > 0)
@@ -125,10 +125,10 @@ export default class TTT3D {
         }
     }
 
-    #copyOrigin(): TransformMap {
+    #copyOrigins(): TransformMap {
         const res: TransformMap = {};
-        for (const pn in this.#origin) {
-            const p = this.#origin[pn];
+        for (const pn in this.#origins) {
+            const p = this.#origins[pn];
             res[pn] = [...p];
         }
         return res;
