@@ -7,7 +7,7 @@
     },
     "dependencies": {
         "@jgtools/easings": "^2.0.1",
-        "@jgtools/ttt3d": "^1.0.5",
+        "@jgtools/ttt3d": "^1.0.6",
         "three": "^0.147.0"
     },
     "devDependencies": {

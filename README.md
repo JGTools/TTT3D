@@ -20,11 +20,16 @@ TTT3D - Tiny Transform Transitions 3D
 npm i @jgtools/ttt3d
 ```
 
+```javascript
+import TTT3D from "@jgtools/ttt3d";
+// ...
+```
+
 ### Using cdn
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.5/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.6/dist/index.min.js";
     // ...
 </script>
 ```
