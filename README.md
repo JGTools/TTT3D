@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/dm/@jgtools/ttt3d)](https://www.npmjs.com/package/@jgtools/ttt3d)
 [![GitHub](https://img.shields.io/github/license/jgtools/ttt3d)](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 
-TTT3D - Tiny Transform Transitions 3D
+Tiny Transform Transitions 3D
 
 ## Features
 
