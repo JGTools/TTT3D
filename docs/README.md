@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/dm/@jgtools/ttt3d)](https://www.npmjs.com/package/@jgtools/ttt3d)
 [![GitHub](https://img.shields.io/github/license/jgtools/ttt3d)](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 
-TTT3D - Tiny Transform Transitions 3D
+Tiny Transform Transitions 3D
 
 ## Features
 
@@ -29,7 +29,7 @@ import TTT3D from "@jgtools/ttt3d";
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.6/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.7/dist/index.min.js";
     // ...
 </script>
 ```

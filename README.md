@@ -29,7 +29,7 @@ import TTT3D from "@jgtools/ttt3d";
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.6/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.7/dist/index.min.js";
     // ...
 </script>
 ```
