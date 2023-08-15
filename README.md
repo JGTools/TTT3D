@@ -29,7 +29,7 @@ import TTT3D from "@jgtools/ttt3d";
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.7/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.8/dist/index.min.js";
     // ...
 </script>
 ```
@@ -176,6 +176,18 @@ for (const [k, e] of playerParts) {
 ## Docs
 
 [Complete docs here](docs/classes/default.md)
+
+## Build Instructions
+
+```sh
+npm i
+npm run build
+```
+
+#### Generate docs
+```sh
+npm run docs
+```
 
 ## License
 

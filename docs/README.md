@@ -1,3 +1,5 @@
+@jgtools/ttt3d / [Exports](modules.md)
+
 # TTT3D
 
 [![npm](https://img.shields.io/npm/v/@jgtools/ttt3d)](https://www.npmjs.com/package/@jgtools/ttt3d)
@@ -29,7 +31,7 @@ import TTT3D from "@jgtools/ttt3d";
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.7/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.8/dist/index.min.js";
     // ...
 </script>
 ```

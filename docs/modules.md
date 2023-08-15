@@ -26,7 +26,7 @@
 
 #### Defined in
 
-[index.ts:179](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L179)
+[index.ts:197](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L197)
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 #### Defined in
 
-[index.ts:178](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L178)
+[index.ts:196](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L196)

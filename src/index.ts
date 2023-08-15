@@ -71,6 +71,15 @@ export default class TTT3D {
     }
 
     /**
+     * Set counter value (range 0-1)
+     * @param name Name of transition
+     */
+    setCounter(name: string, v: number) {
+        const a = this.#transitions.get(name);
+        a && (a.counter = v);
+    }
+
+    /**
      * Get weight of transition
      * @param name Name of transition
      * @returns Weight of transition
@@ -95,6 +104,15 @@ export default class TTT3D {
      */
     getLoop(name: string): boolean {
         return this.#transitions.get(name)?.loop || false;
+    }
+
+    /**
+     * Get current counter value (range 0-1)
+     * @param name Name of transition
+     * @returns Current counter value
+     */
+    getCounter(name: string): number {
+        return this.#transitions.get(name)?.counter || 0;
     }
 
     /**
@@ -139,7 +157,7 @@ class Transition {
     weight = 1;
     rate = 1;
     loop = false;
-    #counter = 1;
+    counter = 1;
     #f: (c: number) => TransformMapTerm;
 
     constructor(f: (c: number) => TransformMapTerm) {
@@ -149,21 +167,21 @@ class Transition {
     play(rate = 1, loop = false) {
         this.rate = rate;
         this.loop = loop;
-        this.#counter = 0;
+        this.counter = 0;
     }
 
     stop() {
         this.loop = false;
-        this.#counter = 1;
+        this.counter = 1;
     }
 
     update(delta: number): TransformMapTerm | void {
-        this.#counter += delta * this.rate;
-        if (this.#counter >= 1)
-            this.#counter = this.loop ? this.#counter - 1 : 1;
-        if (this.#counter >= 1)
+        this.counter += delta * this.rate;
+        if (this.counter >= 1)
+            this.counter = this.loop ? this.counter - 1 : 1;
+        if (this.counter >= 1)
             return;
-        return this.#f(this.#counter);
+        return this.#f(this.counter);
     }
 }
 

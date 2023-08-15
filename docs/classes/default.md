@@ -20,10 +20,12 @@ TTT3D - Tiny Transform Transitions 3D
 - [#addTransform](default.md##addtransform)
 - [#copyOrigins](default.md##copyorigins)
 - [add](default.md#add)
+- [getCounter](default.md#getcounter)
 - [getLoop](default.md#getloop)
 - [getRate](default.md#getrate)
 - [getWeight](default.md#getweight)
 - [play](default.md#play)
+- [setCounter](default.md#setcounter)
 - [setLoop](default.md#setloop)
 - [setRate](default.md#setrate)
 - [setWeight](default.md#setweight)
@@ -44,7 +46,7 @@ TTT3D - Tiny Transform Transitions 3D
 
 #### Defined in
 
-[index.ts:11](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L11)
+[index.ts:11](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L11)
 
 ## Properties
 
@@ -54,7 +56,7 @@ TTT3D - Tiny Transform Transitions 3D
 
 #### Defined in
 
-[index.ts:6](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L6)
+[index.ts:6](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L6)
 
 ___
 
@@ -64,7 +66,7 @@ ___
 
 #### Defined in
 
-[index.ts:5](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L5)
+[index.ts:5](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L5)
 
 ## Methods
 
@@ -86,7 +88,7 @@ ___
 
 #### Defined in
 
-[index.ts:115](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L115)
+[index.ts:133](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L133)
 
 ___
 
@@ -100,7 +102,7 @@ ___
 
 #### Defined in
 
-[index.ts:128](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L128)
+[index.ts:146](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L146)
 
 ___
 
@@ -123,7 +125,31 @@ Add transition
 
 #### Defined in
 
-[index.ts:21](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L21)
+[index.ts:21](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L21)
+
+___
+
+### getCounter
+
+▸ **getCounter**(`name`): `number`
+
+Get current counter value (range 0-1)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | Name of transition |
+
+#### Returns
+
+`number`
+
+Current counter value
+
+#### Defined in
+
+[index.ts:114](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L114)
 
 ___
 
@@ -147,7 +173,7 @@ Whether it loops
 
 #### Defined in
 
-[index.ts:96](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L96)
+[index.ts:105](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L105)
 
 ___
 
@@ -171,7 +197,7 @@ Rate of transition
 
 #### Defined in
 
-[index.ts:87](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L87)
+[index.ts:96](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L96)
 
 ___
 
@@ -195,7 +221,7 @@ Weight of transition
 
 #### Defined in
 
-[index.ts:78](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L78)
+[index.ts:87](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L87)
 
 ___
 
@@ -219,7 +245,30 @@ Play transition
 
 #### Defined in
 
-[index.ts:31](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L31)
+[index.ts:31](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L31)
+
+___
+
+### setCounter
+
+▸ **setCounter**(`name`, `v`): `void`
+
+Set counter value (range 0-1)
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | Name of transition |
+| `v` | `number` | - |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[index.ts:77](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L77)
 
 ___
 
@@ -242,7 +291,7 @@ Set whether the transition loops
 
 #### Defined in
 
-[index.ts:68](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L68)
+[index.ts:68](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L68)
 
 ___
 
@@ -265,7 +314,7 @@ Set rate of transition
 
 #### Defined in
 
-[index.ts:58](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L58)
+[index.ts:58](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L58)
 
 ___
 
@@ -288,7 +337,7 @@ Set weight of transition
 
 #### Defined in
 
-[index.ts:48](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L48)
+[index.ts:48](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L48)
 
 ___
 
@@ -310,7 +359,7 @@ Stop transition
 
 #### Defined in
 
-[index.ts:39](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L39)
+[index.ts:39](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L39)
 
 ___
 
@@ -334,4 +383,4 @@ Updated transforms
 
 #### Defined in
 
-[index.ts:105](https://github.com/JGTools/TTT3D/blob/0163d68/src/index.ts#L105)
+[index.ts:123](https://github.com/JGTools/TTT3D/blob/f7dad99/src/index.ts#L123)

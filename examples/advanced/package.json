@@ -1,13 +1,12 @@
 {
     "source": "src/index.html",
-    
     "scripts": {
         "start": "parcel",
         "build": "parcel build"
     },
     "dependencies": {
         "@jgtools/easings": "^2.0.1",
-        "@jgtools/ttt3d": "^1.0.7",
+        "@jgtools/ttt3d": "^1.0.8",
         "three": "^0.147.0"
     },
     "devDependencies": {

@@ -1,29 +1,30 @@
 {
-  "name": "@jgtools/ttt3d",
-  "version": "1.0.7",
-  "description": "TTT3D - Tiny Transform Transitions 3D",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JGTools/TTT3D.git"
-  },
-  "keywords": [
-    "javascript",
-    "typescript"
-  ],
-  "author": "Erik1001",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JGTools/TTT3D/issues"
-  },
-  "homepage": "https://github.com/JGTools/TTT3D#readme",
-  "devDependencies": {
-    "typescript": "^4.9.4",
-    "typedoc": "^0.23.23",
-    "typedoc-plugin-markdown": "^3.14.0"
-  }
+    "name": "@jgtools/ttt3d",
+    "version": "1.0.8",
+    "description": "TTT3D - Tiny Transform Transitions 3D",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "docs": "npx typedoc --entryPoints src/index.ts "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JGTools/TTT3D.git"
+    },
+    "keywords": [
+        "javascript",
+        "typescript"
+    ],
+    "author": "Erik1001",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JGTools/TTT3D/issues"
+    },
+    "homepage": "https://github.com/JGTools/TTT3D#readme",
+    "devDependencies": {
+        "typescript": "^4.9.4",
+        "typedoc": "^0.23.23",
+        "typedoc-plugin-markdown": "^3.14.0"
+    }
 }
