@@ -124,7 +124,7 @@ export default class TTT3D {
         const res = this.#copyOrigins();
         for (const [k, e] of this.#transitions) {
             const t = e.update(delta);
-            if (t && e.weight > 0)
+            if (t && e.weight != 0)
                 this.#addTransform(res, t, e.weight);
         }
         return res;

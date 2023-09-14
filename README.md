@@ -8,7 +8,7 @@ Tiny Transform Transitions 3D
 
 ## Features
 
-- :heavy_check_mark: Lightweight and simple way to animate 3D objects
+- :heavy_check_mark: Animate 3D objects using lambda functions
 - :heavy_check_mark: Can be used with any 3D library
 - :blue_square: Written in TypeScript
 
@@ -29,7 +29,7 @@ import TTT3D from "@jgtools/ttt3d";
 
 ```html
 <script type="module">
-    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.0.8/dist/index.min.js";
+    import TTT3D from "https://cdn.jsdelivr.net/npm/@jgtools/ttt3d@1.1.0/dist/index.min.js";
     // ...
 </script>
 ```
@@ -85,7 +85,7 @@ cube.scale.set(part[6], part[7], part[8]);
 
 ### Advanced example
 
-Animating a idling, walking and jumping cube with legs.
+Animating an idling, walking and jumping cube with legs.
 
 - Full code [here](examples/advanced)
 - Codepen demo [here](https://codepen.io/erik1001/pen/jOpOwPL)
@@ -174,8 +174,44 @@ for (const [k, e] of playerParts) {
 ```
 
 ## Docs
+#### `new TTT3D(origins: { [key: string]: number[] })`
+Create a new TTT3D instance.
 
-[Complete docs here](docs/classes/default.md)
+#### `add(name: string, fn: (c: number) => number[]): void`
+Add a new animation.
+
+#### `play(name: string, speed: number = 1, loop: boolean = false): void`
+Play an animation.
+
+#### `stop(name: string): void`
+Stop an animation.
+
+#### `update(delta: number): { [key: string]: number[] }`
+Update the transition system and return the result. 
+
+#### `setWeight(name: string, weight: number): void`
+Set the weight of an animation.
+
+#### `setRate(name: string, rate: number): void`
+Set the rate of an animation.
+
+#### `setLoop(name: string, loop: boolean): void`
+Set whether an animation loops.
+
+#### `setCounter(name: string, counter: number): void`
+Set the counter value of an animation.
+
+#### `getWeight(name: string): number`
+Get the weight of an animation.
+
+#### `getRate(name: string): number`
+Get the rate of an animation.
+
+#### `getLoop(name: string): boolean`
+Get whether an animation loops.
+
+#### `getCounter(name: string): number`
+Get the counter value of an animation.
 
 ## Build Instructions
 
@@ -184,11 +220,5 @@ npm i
 npm run build
 ```
 
-#### Generate docs
-```sh
-npm run docs
-```
-
 ## License
-
 MIT
